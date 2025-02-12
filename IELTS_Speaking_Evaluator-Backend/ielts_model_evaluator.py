@@ -23,6 +23,12 @@ You are an IELTS speaking evaluator. Given the following topic and transcript, p
     - For grammar, point out any common errors or areas that need improvement, and provide suggestions for improvement.
     - For vocabulary, highlight any repetitive or basic word choices, and recommend more advanced or varied expressions that could enhance the response.
 
+4. Fluency (out of 10):
+
+    - Assess the flow of the speaker's response, including smoothness and ease of communication.
+    - Consider the speaker's ability to speak without excessive pauses, hesitations, or fillers (e.g., "um," "like").
+    - Provide a score out of 10 for fluency, explaining your reasoning.
+
 Topic : {topic}    
 
 Transcript:
@@ -32,8 +38,8 @@ Transcript:
 class EvaluationResult(BaseModel):
     grammer_score: int = Field(..., description="Score for grammar")
     vocabulary_score: int = Field(..., description="Score for vocabulary")
+    fluency_score: int = Field(..., description="Score for fluency")
     feedback: str = Field(..., description="Feedback on the evaluation")
-
 
 
 class Evaluator:

@@ -33,11 +33,11 @@ async def upload_audio_stream(request: Request):
         evaluation_result = evaluator.evaluate(topic, transcription)  # Call the evaluator to process the transcription
 
         return {
-            "pronunciation_score": 4,
-            "fluency_score": 3,
+            "pronunciation_score": 7,
+            "fluency_score": evaluation_result.fluency_score,
             "grammar_score": evaluation_result.grammer_score,
             "vocabulary_score": evaluation_result.vocabulary_score,
-            "overall_score": Math.ceil((evaluation_result.grammer_score + evaluation_result.vocabulary_score + 4 + 3) / 4),
+            "overall_score": Math.ceil((evaluation_result.grammer_score + evaluation_result.vocabulary_score + evaluation_result.fluency_score + 4) / 4),
             "feedback": evaluation_result.feedback,
             "transcription": transcription,
         }
