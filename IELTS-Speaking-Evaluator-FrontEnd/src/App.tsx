@@ -238,7 +238,7 @@ function App() {
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
               <div className="flex items-center justify-between mb-8">
                 <h1 className="text-5xl font-extrabold text-blue-900 tracking-wide bg-gradient-to-r from-blue-200 via-teal-200 to-green-200 p-6 rounded-xl" style={{ fontFamily: 'Jazz Script' }}>
-                  IELTS Speaking Evaluator
+                  IELTS AI Speaking Evaluator
                 </h1>
                 {currentTopic && (
                   <button
